@@ -1,3 +1,14 @@
+<div class="container">
 <h1><%=@list.name%></h1>
 
-<p>Movies...</p>
+<% @list.movies.each do |m|%>
+<div class="card-product">
+  <img src="<%= m.poster_url %>" />
+  <div class="card-product-infos">
+    <h2><%= m.title %></h2>
+    <p><%= m.overview %></p>
+  </div>
+</div>
+<%end%>
+
+</div>
