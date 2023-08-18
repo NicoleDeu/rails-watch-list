@@ -3,6 +3,7 @@
 
 <ul class="list-group">
   <% @lists.each do |l|%>
-  <li class="list-group-item"><%= l.name%></li>
+  <li class="list-group-item"><%= cl_image_tag l.photo.key, width: 150, height: 150, crop: :thumb %><%= l.name%></li>
   <%end%>
+
 </div>
